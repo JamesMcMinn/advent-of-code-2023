@@ -1,4 +1,4 @@
-overlaps = []
+overlaps: list[int] = []
 for i, line in enumerate([line for line in open("input.txt")][::-1]):
     _, winning, have = line.replace(":", "|").split("|", 2)
     overlap = len(set(winning.split()) & set(have.split()))
